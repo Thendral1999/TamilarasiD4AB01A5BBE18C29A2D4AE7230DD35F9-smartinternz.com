@@ -1,0 +1,23 @@
+class student:
+
+  def __init__(self, name, roll_number, cgpa):
+    self.name = name
+    self.roll_number = roll_number
+    self.cgpa = cgpa
+
+
+def sort_students(student_lists):
+  sorted_students = sorted(student_lists, key=lambda student: student.cgpa, reverse=True)
+  return sorted_students
+
+
+students=[
+    student("Thendral", "A151", 7.8),
+    student("Maha", "A152", 8.2),
+    student("Jaya", "A153", 9.0),
+    student("priya", "A154", 9.8),
+]
+sorted_students = sort_students(students)
+
+for student in sorted_students:
+  print("Name: {}, Roll Number: {}, CGPA: {}".format(student.name,student.roll_number,student.cgpa))
